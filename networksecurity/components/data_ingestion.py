@@ -34,7 +34,15 @@ class DataIngestion:
             database_name=self.data_ingestion_config.database_name
             collection_name=self.data_ingestion_config.collection_name
             self.mongo_client=pymongo.MongoClient(MONGO_DB_URL)
+            # TEMPORARY DEBUG CODE (STEP 1)
+            print("DEBUG → Collection name from config:", collection_name)
+            print("DEBUG → Available databases:",
+              self.mongo_client.list_database_names())
+            print("DEBUG → Available collections:",
+              self.mongo_client[database_name].list_collection_names())
+            # END DEBUG CODE
             collection=self.mongo_client[database_name][collection_name]
+
 
             df=pd.DataFrame(list(collection.find()))
             if "_id" in df.columns.to_list():
@@ -43,7 +51,7 @@ class DataIngestion:
             df.replace({"na":np.nan},inplace=True)
             return df
         except Exception as e:
-            raise NetworkSecurityException
+            raise NetworkSecurityException(e,sys)
         
     def export_data_into_feature_store(self,dataframe: pd.DataFrame):
         try:
@@ -60,7 +68,7 @@ class DataIngestion:
     def split_data_as_train_test(self,dataframe: pd.DataFrame):
         try:
             train_set, test_set = train_test_split(
-                dataframe, test_size=self.data_ingestion_config.train_test_split_ratio
+                dataframe, test_size=self.data_ingestion_config.train_test_split_ratio,random_state=42
             )
             logging.info("Performed train test split on the dataframe")
 
@@ -81,6 +89,7 @@ class DataIngestion:
             test_set.to_csv(
                 self.data_ingestion_config.testing_file_path, index=False, header=True
             )
+            return train_set, test_set
             logging.info(f"Exported train and test file path.")
 
             
@@ -98,4 +107,4 @@ class DataIngestion:
             return dataingestionartifact
 
         except Exception as e:
-            raise NetworkSecurityException
+            raise NetworkSecurityException(e, sys)
