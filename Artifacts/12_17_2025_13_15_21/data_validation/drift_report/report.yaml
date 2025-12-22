@@ -1,0 +1,93 @@
+Abnormal_URL:
+  drift_status: false
+  p_value: 1.0
+DNSRecord:
+  drift_status: false
+  p_value: 1.0
+Domain_registeration_length:
+  drift_status: false
+  p_value: 0.982673984199772
+Favicon:
+  drift_status: false
+  p_value: 0.8713207646126931
+Google_Index:
+  drift_status: false
+  p_value: 0.9518099343765413
+HTTPS_token:
+  drift_status: false
+  p_value: 1.0
+Iframe:
+  drift_status: false
+  p_value: 0.4804466389691172
+Links_in_tags:
+  drift_status: false
+  p_value: 0.9990674182373884
+Links_pointing_to_page:
+  drift_status: false
+  p_value: 0.9999955619617864
+Page_Rank:
+  drift_status: false
+  p_value: 0.9999148748234266
+Prefix_Suffix:
+  drift_status: false
+  p_value: 0.9591630531107953
+Redirect:
+  drift_status: false
+  p_value: 1.0
+Request_URL:
+  drift_status: false
+  p_value: 0.8534124262698983
+Result:
+  drift_status: false
+  p_value: 1.0
+RightClick:
+  drift_status: false
+  p_value: 0.9826739841997723
+SFH:
+  drift_status: false
+  p_value: 0.9975567739681741
+SSLfinal_State:
+  drift_status: false
+  p_value: 0.9999999999992943
+Shortining_Service:
+  drift_status: false
+  p_value: 1.0
+Statistical_report:
+  drift_status: false
+  p_value: 1.0
+Submitting_to_email:
+  drift_status: false
+  p_value: 0.903929532220132
+URL_Length:
+  drift_status: false
+  p_value: 1.0
+URL_of_Anchor:
+  drift_status: false
+  p_value: 0.9252648943119537
+age_of_domain:
+  drift_status: false
+  p_value: 0.8669375646400233
+double_slash_redirecting:
+  drift_status: false
+  p_value: 0.999999999999748
+having_At_Symbol:
+  drift_status: false
+  p_value: 1.0
+having_IP_Address:
+  drift_status: false
+  p_value: 1.0
+having_Sub_Domain:
+  drift_status: false
+  p_value: 0.8534124262699074
+on_mouseover:
+  drift_status: false
+  p_value: 0.9783976116108051
+popUpWidnow:
+  drift_status: false
+  p_value: 0.9184669915153916
+port:
+  drift_status: false
+  p_value: 0.9798953580695309
+web_traffic:
+  drift_status: false
+  p_value: 0.9697727875445914
